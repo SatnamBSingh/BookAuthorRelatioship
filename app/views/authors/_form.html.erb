@@ -20,6 +20,9 @@
     <%= form.label :age %>
     <%= form.number_field :age %>
   </div>
+  <div class="field">
+    <%= form.collection_select(:book_ids, Book.all, :id, :title, {}, multiple: true) %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

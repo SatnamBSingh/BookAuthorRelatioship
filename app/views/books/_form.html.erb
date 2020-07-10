@@ -15,6 +15,9 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
+  <div class="field">
+    <%= form.collection_select(:author_ids, Author.all, :id, :name, {}, multiple: true) %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
